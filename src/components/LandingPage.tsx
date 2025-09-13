@@ -33,7 +33,7 @@ export default function LandingPage() {
       <div className="scan-lines fixed inset-0 pointer-events-none z-60"></div>
       
       {/* Floating Wide Pill Header */}
-      <header className="fixed top-6 left-8 right-8 z-70 frosted-glass rounded-full px-12 py-4">
+      <header className="fixed top-6 left-8 right-8 z-70 frosted-glass rounded-lg px-12 py-4 border-[0.25px] border-gray-600">
         <nav className="flex items-center justify-between w-full">
           <div>
             <img 
@@ -46,10 +46,10 @@ export default function LandingPage() {
             HACKCMU 2025
           </div>
           <div className="flex items-center space-x-4">
-            <button className="retro-button bg-black text-white px-4 py-2 text-xs tracking-wider hover:bg-white hover:text-black rounded-full">
+            <button className="retro-button bg-black text-white px-4 py-2 text-xs tracking-wider hover:bg-white hover:text-black rounded-lg">
               DEVPOST
             </button>
-            <button className="retro-button bg-white text-black px-4 py-2 text-xs tracking-wider hover:bg-black hover:text-white rounded-full">
+            <button className="retro-button bg-white text-black px-4 py-2 text-xs tracking-wider hover:bg-black hover:text-white rounded-lg">
               GITHUB
             </button>
           </div>
