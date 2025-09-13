@@ -110,9 +110,9 @@ body {
 }
 
 .crt-flicker {
-  animation: crt-flicker 1s infinite;
+  animation: crt-flicker 0.3s infinite;
 }
 
 .crt-screen {
-  animation: crt-brightness-flicker 2s infinite;
+  animation: crt-brightness-flicker 0.8s infinite;
 }
