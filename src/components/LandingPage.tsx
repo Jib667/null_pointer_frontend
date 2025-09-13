@@ -44,7 +44,7 @@ export default function LandingPage() {
               className="h-12 w-auto pixelated"
             />
           </div>
-          <div className="text-xs tracking-wider text-white font-bold ml-18">
+          <div className="text-xs tracking-wider text-white font-bold">
             HACKCMU 2025
           </div>
           <div className="flex items-center">
