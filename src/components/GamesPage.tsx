@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import nullPointerLogo from "../assets/null_pointer_logo.png"
+import duckHuntImage from "../assets/duck_hunt.png"
 import FaultyTerminal from "./FaultyTerminal"
 
 export default function GamesPage() {
@@ -70,17 +71,6 @@ export default function GamesPage() {
             </Link>
           </div>
 
-          {/* Library Section */}
-          <div>
-            <h2 className="text-sm font-bold text-white tracking-wider mb-6">
-              LIBRARY
-            </h2>
-            
-            {/* Future game cards will go here */}
-            <div className="text-left text-gray-400 text-xs tracking-wider">
-              GAMES WILL APPEAR HERE
-            </div>
-          </div>
         </div>
       </div>
 
@@ -137,8 +127,27 @@ export default function GamesPage() {
                     <div className="text-green-400 text-sm tracking-widest font-mono">
                       READY FOR GAMES
                     </div>
-                    <div className="text-gray-400 text-xs tracking-wider">
+                    <div className="text-gray-400 text-xs tracking-wider mb-6">
                       SELECT A GAME BELOW
+                    </div>
+                    
+                    {/* Duck Hunt Game Card */}
+                    <div className="flex justify-center">
+                      <a 
+                        href="http://localhost:3001/" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="retro-border bg-black p-4 hover:bg-gray-900 transition-colors cursor-pointer block"
+                      >
+                        <img 
+                          src={duckHuntImage} 
+                          alt="Duck Hunt" 
+                          className="h-20 w-auto pixelated mx-auto mb-2"
+                        />
+                        <div className="text-white text-xs tracking-wider">
+                          DUCK HUNT
+                        </div>
+                      </a>
                     </div>
                   </div>
                 </div>

@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom"
-import { Smartphone, Monitor, Zap } from "lucide-react"
+import { Smartphone, Monitor, Zap, ChevronDown } from "lucide-react"
 import FaultyTerminal from "./FaultyTerminal"
 import nullPointerLogo from "../assets/null_pointer_logo.png"
+import { useState } from "react"
 
 export default function LandingPage() {
+  const [isGithubDropdownOpen, setIsGithubDropdownOpen] = useState(false)
   return (
     <div className="min-h-screen bg-black text-white relative overflow-x-hidden">
       {/* Faulty Terminal Background */}
@@ -45,13 +47,37 @@ export default function LandingPage() {
           <div className="text-xs tracking-wider text-white font-bold ml-18">
             HACKCMU 2025
           </div>
-          <div className="flex items-center space-x-4">
-            <button className="retro-button bg-black text-white px-4 py-2 text-xs tracking-wider hover:bg-white hover:text-black rounded-lg">
-              DEVPOST
-            </button>
-            <button className="retro-button bg-white text-black px-4 py-2 text-xs tracking-wider hover:bg-black hover:text-white rounded-lg">
-              GITHUB
-            </button>
+          <div className="flex items-center">
+            <div className="relative">
+              <button 
+                onClick={() => setIsGithubDropdownOpen(!isGithubDropdownOpen)}
+                className="retro-button bg-white text-black px-4 py-2 text-xs tracking-wider hover:bg-black hover:text-white rounded-lg flex items-center space-x-2"
+              >
+                <span>GITHUB</span>
+                <ChevronDown className={`h-3 w-3 transition-transform ${isGithubDropdownOpen ? 'rotate-180' : ''}`} />
+              </button>
+              
+              {isGithubDropdownOpen && (
+                <div className="absolute top-full mt-2 right-0 bg-black border border-gray-400 rounded-lg p-2 min-w-[120px] z-80">
+                  <a 
+                    href="https://github.com/Jib667/nullpointer"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block retro-button bg-black text-white px-3 py-2 text-xs tracking-wider hover:bg-white hover:text-black rounded mb-2"
+                  >
+                    FRONTEND
+                  </a>
+                  <a 
+                    href="https://github.com/overthrowing/null_pointer_backend"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block retro-button bg-black text-white px-3 py-2 text-xs tracking-wider hover:bg-white hover:text-black rounded"
+                  >
+                    BACKEND
+                  </a>
+                </div>
+              )}
+            </div>
           </div>
         </nav>
       </header>
@@ -76,7 +102,7 @@ export default function LandingPage() {
             <div className="retro-border bg-black p-6 mb-12 max-w-3xl mx-auto">
               <p className="text-sm leading-relaxed text-white">
                 EXPERIENCE CLASSIC LIGHT GUN GAMES LIKE DUCK HUNT USING YOUR 
-                SMARTPHONE AND COMPUTER VISION TECHNOLOGY. POINT, SHOOT, AND 
+                SMARTPHONE AND GYROSCOPIC VECTOR-ESTIMATION TECHNOLOGY. POINT, SHOOT, AND 
                 RELIVE THE MAGIC OF ARCADE GAMING ON MODERN DEVICES.
               </p>
             </div>
@@ -87,9 +113,6 @@ export default function LandingPage() {
                   &gt; PLAY GAMES &lt;
                 </button>
               </Link>
-              <button className="retro-button bg-black text-white px-8 py-4 text-sm tracking-wider hover:bg-white hover:text-black">
-                &gt; LEARN MORE &lt;
-              </button>
             </div>
           </div>
         </section>
@@ -104,8 +127,8 @@ export default function LandingPage() {
             </div>
             <div className="retro-border bg-black p-4 max-w-2xl mx-auto">
               <p className="text-sm text-white">
-                ADVANCED COMPUTER VISION TECHNOLOGY TRANSFORMS YOUR 
-                SMARTPHONE INTO A PRECISE AIMING DEVICE
+                YOUR PHONE'S INTERNAL GYROSCOPE AND ACCELEROMETER TECHNOLOGY TRANSFORMS YOUR 
+                SMARTPHONE INTO A PRECISE AIMING DEVICE FOR RETRO GAMING EXPERIENCE
               </p>
             </div>
           </div>
@@ -120,7 +143,7 @@ export default function LandingPage() {
                   PHONE CONTROLLER
                 </h3>
                 <p className="text-xs text-white leading-relaxed">
-                  USE YOUR SMARTPHONE'S CAMERA AND SENSORS AS A PRECISION 
+                  USE YOUR SMARTPHONE'S GYROSCOPE AND SENSORS AS A PRECISION 
                   AIMING DEVICE FOR RETRO GAMING EXPERIENCE
                 </p>
               </div>
@@ -132,7 +155,7 @@ export default function LandingPage() {
                   <Monitor className="h-8 w-8 text-black" />
                 </div>
                 <h3 className="text-lg font-bold text-white mb-4 tracking-wider">
-                  COMPUTER VISION
+                  LAPTOP CAMERA
                 </h3>
                 <p className="text-xs text-white leading-relaxed">
                   REAL-TIME TRACKING AND CALIBRATION FOR ACCURATE 
@@ -185,11 +208,11 @@ export default function LandingPage() {
                 <div>
                   <div className="retro-border bg-white p-3 mb-6">
                     <h3 className="text-sm font-bold text-black tracking-wider text-center">
-                      COMPUTER VISION
+                      BACKEND
                     </h3>
                   </div>
                   <div className="space-y-3">
-                    {['WEBRTC', 'OPENCV', 'MEDIAPIPE', 'TENSORFLOW.JS'].map((tech) => (
+                    {['WEBRTC', 'SMART TRACKING', 'ACCELEROMETER', 'GYROSCOPE'].map((tech) => (
                       <div key={tech} className="retro-border bg-black p-2">
                         <span className="text-xs text-white tracking-wider">&gt; {tech}</span>
                       </div>
