@@ -134,7 +134,7 @@ export default function GamesPage() {
                     {/* Duck Hunt Game Card */}
                     <div className="flex justify-center">
                       <a 
-                        href="http://localhost:3001/" 
+                        href="https://gymote-server.fly.dev" 
                         target="_blank"
                         rel="noopener noreferrer"
                         className="retro-border bg-black p-4 hover:bg-gray-900 transition-colors cursor-pointer block"
